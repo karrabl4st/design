@@ -1,9 +1,18 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Email</title>
-    <link href="style.css" rel="stylesheet">
+    <style>
+
+    </style>
 </head>
+<body>
+    
+</body>
+</html>
 
 <body>
     <center class="wrapper">
@@ -11,50 +20,22 @@
         <table class="main" width="100%">
 
             <!-- LOGO -->
+
             <tr>
                 <td>
-                    <table width="100%" class="logo">
+                    <table class="header columns column">
                         <tr>
-                            <td class="columns">
-                                <table class="column utd">
-                                    <tr>
-                                        <td>
-                                            <img id="utd" alt="UTD Logo" title="UTD Logo">
-                                        </td>
-                                    </tr>
-                                </table>
+                            <td>
+                                <img id="utd" alt="UTD Logo" title="UTD Logo">
                             </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
 
             <!-- HEADER -->
-                            <td>
-                                <table class="column heading">
-                                    <tr>
-                                        <td id="heading1">The University of Texas at Dallas</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Office of Research and innovation</td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-
-                    </table>
-                </td>
-            </tr>
 
             <!-- HSR -->
-            <tr>
-                <td>
-                    <table width="100%" class="hsr">
-                        <tr class="columns hsr">
-                            <td><img id="hsr" alt="Human Subject Research" title="Human Subject Research"></td>
-                        </tr>
-                        <tr id="caption">
-                            <td>Lead Story Goes Here</td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
 
             <!-- BODY PARAGRAPH -->
 
@@ -69,5 +50,15 @@
         </table>
 
     </center>
-    <script src="imgPath.js"></script>
+
+    <script>
+        const style = getComputedStyle(document.documentElement);
+        const path = '/Users/jls200015/Library/CloudStorage/Box-Box/images';
+        const imgs = document.querySelectorAll('img');
+        imgs.forEach(img => {
+            let fileName = img.id;
+            img.src = path + '/' + fileName + '.png';
+            console.log(path + '/' + fileName + '.png');
+        });
+    </script>
 </body>
