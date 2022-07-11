@@ -1,39 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Email</title>
     <style>
+        table {
+            border: 0;
+        }
 
+        .wrapper * {
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .main {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .heading {
+            text-align: center;
+        }
+
+        .column1 {
+            margin-right: 0;
+        }
     </style>
+    <script>
+        const utd = document.querySelector("#utd");
+        const column2 = document.getElementsByClassName("column2")[0];
+        const column2Style = getComputedStyle(column2);
+        console.log(column2Style);
+
+    </script>
 </head>
-<body>
-    
-</body>
-</html>
 
 <body>
+
     <center class="wrapper">
-
-        <table class="main" width="100%">
+        <table class="main">
 
             <!-- LOGO -->
 
             <tr>
-                <td>
-                    <table class="header columns column">
+                <td id="utd">
+                    <table class="header column column1">
                         <tr>
                             <td>
-                                <img id="utd" alt="UTD Logo" title="UTD Logo">
+                                <img style="width: 50px; height: 50px;"
+                                    src="https://github.com/karrabl4st/design/blob/master/utd.png?raw=true"
+                                    alt="UTD Logo" title="UTD Logo">
                             </td>
                         </tr>
                     </table>
                 </td>
-            </tr>
 
-            <!-- HEADER -->
+                <!-- HEADER -->
+
+                <td>
+                    <table class="header heading column column2">
+                        <tr>
+                            <td style="text-transform:uppercase; color:#e87500">The University of Texas at Dallas</td>
+                        </tr>
+                        <tr>
+                            <td style="color:gray">Office of Research and Innovation</td>
+                        </tr>
+                    </table>
+                </td>
+
+            </tr>
 
             <!-- HSR -->
 
@@ -48,17 +86,5 @@
             <!-- VOLUNTEERS -->
 
         </table>
-
     </center>
-
-    <script>
-        const style = getComputedStyle(document.documentElement);
-        const path = '/Users/jls200015/Library/CloudStorage/Box-Box/images';
-        const imgs = document.querySelectorAll('img');
-        imgs.forEach(img => {
-            let fileName = img.id;
-            img.src = path + '/' + fileName + '.png';
-            console.log(path + '/' + fileName + '.png');
-        });
-    </script>
 </body>
