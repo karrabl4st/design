@@ -8,34 +8,68 @@
     <title>HTML Email</title>
     <style>
         table {
+            table-layout: fixed;
+            font-family: Helvetica, sans-serif;
+            border-spacing: 0;
             border: 0;
+            Margin: 0;
+            padding: 0;
+        }
+
+        table * {
+            width: inherit;
+            height: inherit;
+            border: 0;
+            Margin: 0;
+            padding: 0;
+        }
+
+        p {
+            color: #0e1111;
+            Margin: 40px;
+            width: calc(100% - 80px);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #hsr {
+            width: 600px;
+        }
+
+        .wrapper {
+            background-color: #d3d3d3;
         }
 
         .wrapper * {
-            margin-right: auto;
-            margin-left: auto;
+            Margin-right: auto;
+            Margin-left: auto;
         }
 
         .main {
             width: 100%;
             max-width: 600px;
+            background-color: #ffffff;
         }
 
-        .heading {
+        .header {
             text-align: center;
+            width: 80%;
+            height: 80%;
         }
 
-        .column1 {
-            margin-right: 0;
+        .hsr .row2 {
+            max-width: 100%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .people {
+            background-color: #154734;
         }
     </style>
-    <script>
-        const utd = document.querySelector("#utd");
-        const column2 = document.getElementsByClassName("column2")[0];
-        const column2Style = getComputedStyle(column2);
-        console.log(column2Style);
-
-    </script>
 </head>
 
 <body>
@@ -47,43 +81,134 @@
 
             <tr>
                 <td id="utd">
-                    <table class="header column column1">
+                    <table class="header">
                         <tr>
                             <td>
-                                <img style="width: 50px; height: 50px;"
-                                    src="https://github.com/karrabl4st/design/blob/master/utd.png?raw=true"
+                                <img src="https://github.com/karrabl4st/design/blob/master/thumbnail_image001.png?raw=true"
                                     alt="UTD Logo" title="UTD Logo">
                             </td>
                         </tr>
                     </table>
                 </td>
-
-                <!-- HEADER -->
-
-                <td>
-                    <table class="header heading column column2">
-                        <tr>
-                            <td style="text-transform:uppercase; color:#e87500">The University of Texas at Dallas</td>
-                        </tr>
-                        <tr>
-                            <td style="color:gray">Office of Research and Innovation</td>
-                        </tr>
-                    </table>
-                </td>
-
             </tr>
 
             <!-- HSR -->
 
+            <tr>
+                <td>
+                    <table class="hsr">
+                        <tr>
+                            <td>
+                                <table style="height:113px;" class="row1">
+                                    <tr>
+                                        <td><img id="hsr"
+                                                src="https://github.com/karrabl4st/design/blob/master/hsr.png?raw=true"
+                                                alt="Human Subject Research" title="Human Subject Research"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table style="background-color: #fdf1e6" class="row2">
+                                    <tr>
+                                        <td style="color: #154734;"><b style="Margin-left: 35px;">Lead Story Goes
+                                                Here</b></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
             <!-- BODY PARAGRAPH -->
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <td>
+                                <p>
+                                    The Human Subjects Research Office (HSR) facilitates and promotes the ethical
+                                    involvement of human subjects in research by providing administrative support to the
+                                    Institutional Review Board and consultative services to investigators and their
+                                    research staff. The HSR facilitates the IRB review and approval of human subjects
+                                    research in accordance with applicable federal and state regulations and UTD
+                                    policies and procedures. Additionally, the HSR conducts post-monitoring and quality
+                                    assurance activities and provides educational outreach for the UTD research
+                                    community.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
 
             <!-- DIVERSITY -->
-
-            <!-- HELPFUL HINTS -->
+            <tr>
+                <td>
+                    <table class="diversity">
+                        <tr>
+                            <td>
+                                <table class="row1">
+                                    <tr>
+                                        <td><img src="https://github.com/karrabl4st/design/blob/master/diversity.png?raw=true"
+                                                alt="Diversity Photo" title="Diversity Photo"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table style="background-color: #fdf1e6" class="row2">
+                                    <tr>
+                                        <td><img style="width:140px; height:50px; Margin-left: 5%; Margin-top: 10px; Margin-bottom: 10px"
+                                                src="https://github.com/karrabl4st/design/blob/master/helpful-hints.png?raw=true"
+                                                alt="Helpful Hints" title="Helpful Hints"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
 
             <!-- BODY PARAGRAPH -->
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <td>
+                                <p>
+                                    The Human Subjects Research Office (HSR) facilitates and promotes the ethical
+                                    involvement of human subjects in research by providing administrative support to the
+                                    Institutional Review Board and consultative services to investigators and their
+                                    research staff. The HSR facilitates the IRB review and approval of human subjects
+                                    research in accordance with applicable federal and state regulations and UTD
+                                    policies and procedures. Additionally, the HSR conducts post-monitoring and quality
+                                    assurance activities and provides educational outreach for the UTD research
+                                    community.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
 
             <!-- VOLUNTEERS -->
+            <tr>
+                <td>
+                    <table class="people">
+                        <tr>
+                            <td style="color:#ffffff; text-align: center; font-size: 200%;"><b
+                                    style="position: relative; top: 40%;"><br><br><br>Thank you to the volunteers</b></td>
+                        </tr>
+                        <tr>
+                            <td><img style="width: 50%; height: 50%; Margin-top: 10%; Margin-bottom: 25%; Margin-left: 25%; Margin-right: 25%;"
+                                    src="https://github.com/karrabl4st/design/blob/master/people.png?raw=true"
+                                    alt="People" title="People"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
 
         </table>
     </center>
